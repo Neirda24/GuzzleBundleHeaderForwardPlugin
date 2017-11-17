@@ -29,7 +29,9 @@ class GuzzleBundleHeaderForwardPlugin extends Bundle implements EightPointsGuzzl
             ->canBeEnabled()
             ->children()
                 ->arrayNode('headers')
-                    ->defaultValue([])
+                    ->normalizeKeys(false)
+                    ->scalarPrototype()
+                    ->end()
                 ->end()
             ->end()
         ;
@@ -58,7 +60,7 @@ class GuzzleBundleHeaderForwardPlugin extends Bundle implements EightPointsGuzzl
             $container->setDefinition($forwardHeaderMiddlewareDefinitionName, $forwardHeaderMiddlewareDefinition);
 
             $forwardHeaderMiddlewareExpression = new Expression(sprintf(
-                'service(\'%s\').addHeader()',
+                'service(\'%s\')',
                 $forwardHeaderMiddlewareDefinitionName
             ));
 

@@ -35,7 +35,7 @@ class GuzzleForwardHeaderMiddleware
      *
      * @return callable
      */
-    public function addHeader(callable $handler): callable
+    public function __invoke(callable $handler): callable
     {
         return function(RequestInterface $request, array $options) use (&$handler) {
             if (empty($this->headers)) {
