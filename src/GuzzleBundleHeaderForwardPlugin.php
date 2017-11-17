@@ -64,7 +64,7 @@ class GuzzleBundleHeaderForwardPlugin extends Bundle implements EightPointsGuzzl
                 $forwardHeaderMiddlewareDefinitionName
             ));
 
-            $handler->addMethodCall('push', [$forwardHeaderMiddlewareExpression, $this->getPluginName()]);
+            $handler->addMethodCall('unshift', [$forwardHeaderMiddlewareExpression, $this->getPluginName()]);
         }
     }
 }
