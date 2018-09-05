@@ -1,5 +1,5 @@
 {
-    "name": "neirda24/guzzle-bundle-header-forward-plugin",
+    "name": "sbutnariu/guzzle-bundle-header-forward-plugin",
     "type": "library",
     "description": "Guzzle plugin that allow you to forward headers from your current request into the the guzzle one automatically.",
     "keywords": [
@@ -25,6 +25,10 @@
             "homepage": "https://github.com/Neirda24"
         },
         {
+            "name": "Silviu Butnariu",
+            "email": "silviubutnariu@yahoo.com"
+        },
+        {
             "name": "Community",
             "homepage": "https://github.com/Neirda24/GuzzleBundleHeaderForwardPlugin/contributors"
         }
@@ -33,17 +37,17 @@
         "php": "^7.0",
         "guzzlehttp/guzzle": "^6.0",
         "eightpoints/guzzle-bundle": "~7.0",
-        "symfony/http-kernel": "~2.3|~3.0",
-        "symfony/config": "~2.3|~3.0",
-        "symfony/dependency-injection": "~2.3|~3.0",
-        "symfony/expression-language": "~2.3|~3.0"
+        "symfony/http-kernel": "~4.0",
+        "symfony/config": "~4.0",
+        "symfony/dependency-injection": "~4.0",
+        "symfony/expression-language": "~4.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.1"
     },
     "autoload": {
         "psr-4": {
-            "Neirda24\\Bundle\\GuzzleBundleHeaderForwardPlugin\\": "src"
+            "SilviuButnariu\\Bundle\\GuzzleBundleHeaderForwardPlugin\\": "src"
         }
     }
 }
