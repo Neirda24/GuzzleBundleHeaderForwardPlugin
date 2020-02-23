@@ -4,7 +4,7 @@ This plugin integrates a way to forward headers from the current symfony request
 
 
 ## Requirements
- - PHP 7.0 or above
+ - PHP 7.1 or above
  - [Guzzle Bundle][1]
 
  
